@@ -1,10 +1,10 @@
 ﻿<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>WMS Uiara</title>
+<title>WMS Ibotira</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="theme-color" content="#05080f">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="WMS Uiara">
+<meta name="apple-mobile-web-app-title" content="WMS Ibotira">
 <link rel="manifest" href="manifest.json">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,23 +17,23 @@
    Type  : Barlow Condensed (headers) · JetBrains Mono (codes/scans) · Inter (body)
 ─────────────────────────────────────────────────────────────────────────── */
 :root {
-  --bg:         #f4f7fb;
-  --bg-s:       #ffffff;
-  --bg-r:       #e8eef5;
-  --fg:         #0d1f30;
-  --fg-m:       #1e3d5c;
-  --fg-sub:     #4a6a85;
-  --border:     #d0dce8;
-  --accent:     #00a884;
-  --accent-dim: #d6f5ef;
-  --warn:       #d4820a;
-  --warn-dim:   #fff4e0;
-  --danger:     #c0392b;
-  --danger-dim: #fdecea;
-  --ok:         #1a9e56;
-  --ok-dim:     #e0f7ec;
+  --bg:         #090f1a;
+  --bg-s:       #0e1a2a;
+  --bg-r:       #142232;
+  --fg:         #c8dff2;
+  --fg-m:       #5a84a4;
+  --fg-sub:     #2d4d64;
+  --border:     #182d40;
+  --accent:     #00c8a0;
+  --accent-dim: #061c16;
+  --warn:       #f5a623;
+  --warn-dim:   #1e1200;
+  --danger:     #f04f4f;
+  --danger-dim: #200808;
+  --ok:         #22c46e;
+  --ok-dim:     #061a0e;
   --header:     #05080f;
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -416,10 +416,10 @@ td { padding: 10px 12px; vertical-align: middle; min-width: 0; }
   font-family: 'JetBrains Mono', monospace;
   font-size: 13px; font-weight: 500; letter-spacing: .5px;
 }
-.td-sku  { color: var(--fg); white-space: nowrap; }
+.td-sku  { color: var(--fg-m); white-space: nowrap; }
 .td-loc  { color: var(--accent); font-weight: 600; white-space: nowrap; }
 .td-num  { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; font-weight: 500; }
-.td-muted { color: var(--fg); white-space: nowrap; }
+.td-muted { color: var(--fg-m); white-space: nowrap; }
 .td-desc { max-width: 240px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* ── Badges ──────────────────────────────────────────── */
@@ -652,9 +652,9 @@ select {
   --ok:#1a9e56; --ok-dim:#e0f7ec; --header:#050a14;
   color-scheme:light;
 }
-html,body { min-height:100%; background:#f4f7fb; }
+html,body { min-height:100%; background:var(--bg); }
 body { letter-spacing:.005em; }
-.app-header { background:linear-gradient(115deg,#050a14 0%,#091628 55%,#0b2232 100%); box-shadow:0 1px 0 rgba(0,0,0,.08),0 4px 20px rgba(0,0,0,.12); }
+.app-header { background:linear-gradient(115deg,#050a14 0%,#091628 55%,#0b2232 100%); box-shadow:0 1px 0 rgba(148,171,196,.12),0 14px 40px rgba(0,0,0,.3); }
 .app-header::before { display:none; }
 .app-header::after { background:radial-gradient(ellipse at 90% 0%,rgba(0,221,178,.13),transparent 44%); }
 .header-top { max-width:1320px; margin:0 auto; padding-top:17px; padding-bottom:16px; }
@@ -740,8 +740,8 @@ input::placeholder,textarea::placeholder { color:#8aaabf!important; }
 /* ── Detalhe modal ── */
 .det-overlay { position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:200;backdrop-filter:blur(8px);background:rgba(2,8,15,.75); }
 .det-overlay[hidden] { display:none; }
-.det-box { width:min(700px,96vw);max-height:85vh;border-radius:16px;background:var(--bg-s);border:1px solid var(--border);box-shadow:0 24px 60px rgba(0,0,0,.12);display:flex;flex-direction:column;overflow:hidden; }
-.det-head { display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:var(--bg-r);border-bottom:1px solid var(--border);flex-shrink:0;gap:12px; }
+.det-box { width:min(700px,96vw);max-height:85vh;border-radius:16px;background:linear-gradient(145deg,#11223a,#0c1b2e);border:1px solid rgba(148,171,196,.19);box-shadow:0 24px 60px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.07);display:flex;flex-direction:column;overflow:hidden; }
+.det-head { display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:#0f2036;border-bottom:1px solid rgba(148,171,196,.14);flex-shrink:0;gap:12px; }
 .det-title { font-weight:700;font-size:15px;color:var(--fg);flex:1; }
 .det-search { font-size:12px;padding:6px 11px;width:180px;border-radius:8px; }
 .det-count { font-size:11px;color:var(--fg-m);white-space:nowrap; }
@@ -751,8 +751,8 @@ input::placeholder,textarea::placeholder { color:#8aaabf!important; }
 /* ── Limpar posições modal ── */
 .clr-overlay { position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:200;backdrop-filter:blur(8px);background:rgba(2,8,15,.75); }
 .clr-overlay[hidden] { display:none; }
-.clr-box { width:min(520px,96vw);border-radius:16px;background:var(--bg-s);border:1px solid var(--border);box-shadow:0 24px 60px rgba(0,0,0,.12);overflow:hidden; }
-.clr-head { display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:var(--bg-r);border-bottom:1px solid var(--border);font-weight:700;font-size:15px;color:var(--fg); }
+.clr-box { width:min(520px,96vw);border-radius:16px;background:linear-gradient(145deg,#11223a,#0c1b2e);border:1px solid rgba(148,171,196,.19);box-shadow:0 24px 60px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.07);overflow:hidden; }
+.clr-head { display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:#0f2036;border-bottom:1px solid rgba(148,171,196,.14);font-weight:700;font-size:15px;color:var(--fg); }
 .clr-body { padding:20px;display:flex;flex-direction:column;gap:16px; }
 .clr-section-title { font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--fg-m);margin-bottom:10px; }
 .clr-block-grid { display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px; }
@@ -767,8 +767,8 @@ input::placeholder,textarea::placeholder { color:#8aaabf!important; }
 /* ── PIN / Admin overlay ── */
 .pin-overlay { position:fixed;inset:0;z-index:300;backdrop-filter:blur(10px);background:rgba(2,8,15,.88);display:flex;align-items:center;justify-content:center;padding:16px; }
 .pin-overlay[hidden] { display:none; }
-.pin-box { width:min(340px,96vw);border-radius:16px;background:var(--bg-s);border:1px solid var(--border);box-shadow:0 24px 60px rgba(0,0,0,.12);overflow:hidden; }
-.pin-head { display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:var(--bg-r);border-bottom:1px solid var(--border); }
+.pin-box { width:min(340px,96vw);border-radius:16px;background:linear-gradient(145deg,#11223a,#0c1b2e);border:1px solid rgba(148,171,196,.19);box-shadow:0 24px 60px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.07);overflow:hidden; }
+.pin-head { display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:#0f2036;border-bottom:1px solid rgba(148,171,196,.14); }
 .pin-title { font-weight:700;font-size:14px;color:var(--accent);letter-spacing:.5px; }
 .pin-body { padding:28px 24px;display:flex;flex-direction:column;align-items:center;gap:20px; }
 .pin-label { font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--fg-m); }
@@ -813,14 +813,10 @@ input::placeholder,textarea::placeholder { color:#8aaabf!important; }
       <div class="brand-sep"></div>
       <div>
         <div class="brand-name"><span class="bn-ar">AR</span><span class="bn-wms"> WMS</span></div>
-        <div class="brand-sub">WMS Uiara</div>
+        <div class="brand-sub">WMS Ibotira</div>
       </div>
     </div>
     <div style="display:flex;gap:7px;align-items:center;">
-      <div style="display:flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;font-size:11px;font-weight:700;">
-        <button id="stock-btn-1" onclick="switchStock(1)" style="padding:5px 10px;border:none;cursor:pointer;background:var(--accent);color:#fff;transition:all .2s;">EST 1</button>
-        <button id="stock-btn-2" onclick="switchStock(2)" style="padding:5px 10px;border:none;cursor:pointer;background:var(--bg-r);color:var(--fg-m);transition:all .2s;">EST 2</button>
-      </div>
       <span id="sync-dot" title="Sem sincronização (modo local)" style="width:8px;height:8px;border-radius:50%;background:var(--fg-sub);flex-shrink:0;transition:background .4s;cursor:help;"></span>
       <button class="hdr-btn" id="catalogBtn" title="Administração" aria-label="Administração">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -1333,16 +1329,37 @@ const K_HIST    = 'wms_hist_v1';
 const K_CATALOG = 'wms_catalog_v1';
 const K_QTDCX   = 'wms_qtdcx_v1';
 
-// Warehouse layouts: two stocks
-const LAYOUT_1 = { A:12, B:10, C:5, D:12, E:10, F:6 };
-const LAYOUT_2 = { A:19, B:16, C:16, D:16, E:16, F:7, G:7, H:19, I:10 };
-let activeStock = parseInt(localStorage.getItem('wms_uiara_stock') || '1');
-function getLayout() { return activeStock === 1 ? LAYOUT_1 : LAYOUT_2; }
-function getAddrPrefix() { return activeStock + '-'; }
-const LAYOUT = new Proxy({}, { get(_, k) { return getLayout()[k]; }, has(_, k) { return k in getLayout(); }, ownKeys(_) { return Object.keys(getLayout()); }, getOwnPropertyDescriptor(_, k) { return { enumerable: true, configurable: true }; } });
+// Warehouse layout: corridor → max position
+const LAYOUT = { A:17, B:17, C:16, D:17, E:17, F:17, G:18, H:18, I:17, J:17 };
 
-const SEED_V = [];
-const SEED_H = [];
+const SEED_V = [
+  { id:"v01", sku:"30302", desc:"SIAGE COND HIDRATACAO MICELAR 200ml",        qtd:4,  end:"A-1",  val:"01/27" },
+  { id:"v02", sku:"48776", desc:"QUASAR GEL POS BARBA 110g V7",              qtd:1,  end:"A-1",  val:"01/27" },
+  { id:"v03", sku:"53357", desc:"SIAGE AMP CAP RECONS PRO CRONOLOGY 10ml",   qtd:1,  end:"A-2",  val:"02/27" },
+  { id:"v04", sku:"53347", desc:"REF NSPA LOC DES HID CPO LILAC 350ml",      qtd:1,  end:"A-2",  val:"02/27" },
+  { id:"v05", sku:"57993", desc:"KIT OUI SCAPIN 245",                        qtd:1,  end:"A-2",  val:"02/27" },
+  { id:"v06", sku:"56743", desc:"IMPRESSION SAB BARRA 2x90g",                qtd:1,  end:"A-3",  val:"02/27" },
+  { id:"v07", sku:"47963", desc:"BOTI SUN PROT SOL CPO GEL CR FPS50 200g",   qtd:1,  end:"A-3",  val:"03/27" },
+  { id:"v08", sku:"51780", desc:"LYRA LOC DES HID CPO JOY 150ml",            qtd:1,  end:"A-4",  val:"03/27" },
+  { id:"v09", sku:"55481", desc:"NIINA SKIN SERUM FIRM LIFTING 30ml",        qtd:1,  end:"A-4",  val:"02/27" },
+  { id:"v10", sku:"88135", desc:"FLORATTA EDP ROSE SUCREE 75ml",             qtd:3,  end:"A-5",  val:"07/30" },
+  { id:"v11", sku:"90513", desc:"MALBEC DES COL V7 100ml",                   qtd:4,  end:"A-5",  val:"31/30" },
+  { id:"v12", sku:"94199", desc:"DR BOTICA COL POCAO/CORAG V3 120ml",        qtd:2,  end:"B-3",  val:"04/29" },
+  { id:"v13", sku:"85124", desc:"CBEM LOC DES HID CPO DELEITE V3 400ml",     qtd:2,  end:"C-2",  val:"13/29" },
+  { id:"v14", sku:"59824", desc:"REF NSPA CR PERF DES CPO ORQ/LUM 350ml",    qtd:35, end:"G-1",  val:"04/29" },
+  { id:"v15", sku:"89679", desc:"SIAGE COND BOND RESET 200ML",               qtd:1,  end:"G-3",  val:"30/29" },
+  { id:"v16", sku:"86369", desc:"NSPA DES COL BDY SPLSH ORQ/LUMIERE 200ml",  qtd:2,  end:"K-1",  val:"05/30" },
+  { id:"v17", sku:"58015", desc:"KIT OUI JARDIN/GRASSE",                     qtd:4,  end:"J-1",  val:"03/27" },
+];
+
+const SEED_H = [
+  { id:"h01", tipo:"entrada", end:"G-1",  sku:"59824", desc:"REF NSPA CR PERF DES CPO ORQ/LUM 350ml",   qtd:35, val:"04/29", op:"kelly",   data:"22/06/2026 10:00" },
+  { id:"h02", tipo:"baixa",   end:"A-1",  sku:"86369", desc:"NSPA DES COL BDY SPLSH ORQ/LUMIERE 200ml", qtd:1,  val:"05/30", op:"elias",   data:"04/09/2026 09:43" },
+  { id:"h03", tipo:"baixa",   end:"G-3",  sku:"89679", desc:"SIAGE COND BOND RESET 200ML",              qtd:1,  val:"30/29", op:"miguel",  data:"04/09/2026 09:59" },
+  { id:"h04", tipo:"baixa",   end:"A-5",  sku:"88135", desc:"FLORATTA EDP ROSE SUCREE 75ml",            qtd:1,  val:"07/30", op:"miguel",  data:"04/09/2026 10:01" },
+  { id:"h05", tipo:"entrada", end:"B-3",  sku:"94199", desc:"DR BOTICA COL POCAO/CORAG V3 120ml",       qtd:4,  val:"04/29", op:"elias",   data:"05/10/2026 08:30" },
+  { id:"h06", tipo:"entrada", end:"J-1",  sku:"58015", desc:"KIT OUI JARDIN/GRASSE",                   qtd:4,  val:"03/27", op:"leticia", data:"05/10/2026 09:00" },
+];
 
 function loadData(key, seed) {
   try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : JSON.parse(JSON.stringify(seed)); }
@@ -1355,12 +1372,12 @@ function save(key, data) {
   if (key === K_VOLS) {
     _volsSkipUntil = Date.now() + 4000;
     const fbData = {items: data.length > 0 ? data : null, ts: firebase.database.ServerValue.TIMESTAMP};
-    fbDb.ref('vd_uiara/vols').set(fbData)
+    fbDb.ref('vd_ibotira/vols').set(fbData)
       .then(() => { _volsSkipUntil = 0; })
       .catch(() => {
         _volsSkipUntil = 0;
         setSyncStatus('err');
-        fbDb.ref('vd_uiara/vols').once('value').then(snap => {
+        fbDb.ref('vd_ibotira/vols').once('value').then(snap => {
           if (snap.exists()) {
             vols = snap.val().items || [];
             localStorage.setItem(K_VOLS, JSON.stringify(vols));
@@ -1369,9 +1386,9 @@ function save(key, data) {
         });
       });
   }
-  else if (key === K_HIST) fbDb.ref('vd_uiara/hist').set({items: data.slice(-500)}).catch(()=>{});
-  else if (key === K_CATALOG) fbDb.ref('vd_uiara/catalog').set(data).catch(()=>{});
-  else if (key === K_QTDCX)   fbDb.ref('vd_uiara/qtdcx').set(data).catch(()=>{});
+  else if (key === K_HIST) fbDb.ref('vd_ibotira/hist').set({items: data.slice(-500)}).catch(()=>{});
+  else if (key === K_CATALOG) fbDb.ref('vd_ibotira/catalog').set(data).catch(()=>{});
+  else if (key === K_QTDCX)   fbDb.ref('vd_ibotira/qtdcx').set(data).catch(()=>{});
 }
 
 let vols    = loadData(K_VOLS, SEED_V);
@@ -2405,7 +2422,7 @@ document.getElementById('report-send').addEventListener('click', async () => {
   status.textContent = '';
 
   const dataStr = new Date().toLocaleDateString('pt-BR');
-  const titulo  = `Relatório WMS Atiara — ${dataStr}`;
+  const titulo  = `Relatório WMS Ibotira — ${dataStr}`;
 
   try {
     const mcp = await window.claude.use('mcp');
@@ -2699,28 +2716,7 @@ function setSyncStatus(state) {
   dot.title = cfg[1];
 }
 
-if ('serviceWorker' in navigator) navigator.serviceWorker.getRegistrations().then(regs => regs.forEach(r => r.unregister()));
-
-function switchStock(n) {
-  activeStock = n;
-  localStorage.setItem('wms_uiara_stock', n);
-  document.getElementById('stock-btn-1').style.background = n === 1 ? 'var(--accent)' : 'var(--bg-r)';
-  document.getElementById('stock-btn-1').style.color = n === 1 ? '#fff' : 'var(--fg-m)';
-  document.getElementById('stock-btn-2').style.background = n === 2 ? 'var(--accent)' : 'var(--bg-r)';
-  document.getElementById('stock-btn-2').style.color = n === 2 ? '#fff' : 'var(--fg-m)';
-  renderPainel();
-  renderMapa && renderMapa();
-}
-// Init stock buttons state
-(function() {
-  const n = activeStock;
-  if (document.getElementById('stock-btn-1')) {
-    document.getElementById('stock-btn-1').style.background = n === 1 ? 'var(--accent)' : 'var(--bg-r)';
-    document.getElementById('stock-btn-1').style.color = n === 1 ? '#fff' : 'var(--fg-m)';
-    document.getElementById('stock-btn-2').style.background = n === 2 ? 'var(--accent)' : 'var(--bg-r)';
-    document.getElementById('stock-btn-2').style.color = n === 2 ? '#fff' : 'var(--fg-m)';
-  }
-})();
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(()=>{});
 
 (async function initSync() {
   renderPainel();
@@ -2742,44 +2738,44 @@ function switchStock(n) {
     fbDb = firebase.database();
 
     const [vsSnap, hsSnap, catSnap, qtdSnap] = await Promise.all([
-      fbDb.ref('vd_uiara/vols').once('value'),
-      fbDb.ref('vd_uiara/hist').once('value'),
-      fbDb.ref('vd_uiara/catalog').once('value'),
-      fbDb.ref('vd_uiara/qtdcx').once('value'),
+      fbDb.ref('vd_ibotira/vols').once('value'),
+      fbDb.ref('vd_ibotira/hist').once('value'),
+      fbDb.ref('vd_ibotira/catalog').once('value'),
+      fbDb.ref('vd_ibotira/qtdcx').once('value'),
     ]);
 
     if (vsSnap.exists()) {
       vols = vsSnap.val().items || [];
       localStorage.setItem(K_VOLS, JSON.stringify(vols));
     } else if (vols.length > 0) {
-      await fbDb.ref('vd_uiara/vols').set({items: vols});
+      await fbDb.ref('vd_ibotira/vols').set({items: vols});
     }
 
     if (hsSnap.exists()) {
       hist = hsSnap.val().items || [];
       localStorage.setItem(K_HIST, JSON.stringify(hist));
     } else if (hist.length > 0) {
-      await fbDb.ref('vd_uiara/hist').set({items: hist.slice(-500)});
+      await fbDb.ref('vd_ibotira/hist').set({items: hist.slice(-500)});
     }
 
     if (catSnap.exists()) {
       catalog = catSnap.val() || {};
       localStorage.setItem(K_CATALOG, JSON.stringify(catalog));
     } else if (Object.keys(catalog).length > 0) {
-      await fbDb.ref('vd_uiara/catalog').set(catalog);
+      await fbDb.ref('vd_ibotira/catalog').set(catalog);
     }
 
     if (qtdSnap.exists()) {
       qtdCx = qtdSnap.val() || {};
       localStorage.setItem(K_QTDCX, JSON.stringify(qtdCx));
     } else if (Object.keys(qtdCx).length > 0) {
-      await fbDb.ref('vd_uiara/qtdcx').set(qtdCx);
+      await fbDb.ref('vd_ibotira/qtdcx').set(qtdCx);
     }
 
     renderPainel();
     setSyncStatus('ok');
 
-    fbDb.ref('vd_uiara/vols').on('value', snap => {
+    fbDb.ref('vd_ibotira/vols').on('value', snap => {
       if (!snap.exists() || Date.now() < _volsSkipUntil) return;
       vols = snap.val().items || [];
       localStorage.setItem(K_VOLS, JSON.stringify(vols));
@@ -2789,7 +2785,7 @@ function switchStock(n) {
       if (typeof window._refreshDetail === 'function') window._refreshDetail();
     }, () => setSyncStatus('err'));
 
-    fbDb.ref('vd_uiara/hist').on('value', snap => {
+    fbDb.ref('vd_ibotira/hist').on('value', snap => {
       if (!snap.exists()) return;
       hist = snap.val().items || [];
       localStorage.setItem(K_HIST, JSON.stringify(hist));
@@ -2798,14 +2794,14 @@ function switchStock(n) {
       if (av === 'historico') renderHist();
     });
 
-    fbDb.ref('vd_uiara/catalog').on('value', snap => {
+    fbDb.ref('vd_ibotira/catalog').on('value', snap => {
       if (!snap.exists()) return;
       catalog = snap.val() || {};
       localStorage.setItem(K_CATALOG, JSON.stringify(catalog));
       if (typeof renderCatalogCount === 'function') renderCatalogCount();
     });
 
-    fbDb.ref('vd_uiara/qtdcx').on('value', snap => {
+    fbDb.ref('vd_ibotira/qtdcx').on('value', snap => {
       if (!snap.exists()) return;
       qtdCx = snap.val() || {};
       localStorage.setItem(K_QTDCX, JSON.stringify(qtdCx));
