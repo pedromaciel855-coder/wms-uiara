@@ -1500,20 +1500,20 @@ function hideBand(id) {
 // PAINEL
 // ════════════════════════════════════════════════════
 function renderPainel() {
-  const stockVols = vols.filter(v => (v.stock === activeStock) || (v.stock == null));
+  const stockVols = vols.filter(v => v.stock === activeStock || (v.stock == null && activeStock === 1));
   const usedEnd = new Set(stockVols.map(v => v.end)).size;
   const totalEnd = Object.values(LAYOUT).reduce((a,b)=>a+b,0);
   const skus = new Set(stockVols.map(v => v.sku)).size;
   const totalVol = stockVols.reduce((s,v) => s + (v.qtd||0), 0);
   const today = new Date().toLocaleDateString('pt-BR');
-  const hoje = hist.filter(h => h.data.startsWith(today) && ((h.stock === activeStock) || (h.stock == null))).length;
+  const hoje = hist.filter(h => h.data.startsWith(today) && (h.stock === activeStock || (h.stock == null && activeStock === 1))).length;
 
   document.getElementById('st-end').textContent  = `${usedEnd}/${totalEnd}`;
   document.getElementById('st-sku').textContent  = skus;
   document.getElementById('st-vol').textContent  = totalVol;
   document.getElementById('st-hoje').textContent = hoje;
 
-  const rows = [...hist].filter(h => (h.stock === activeStock) || (h.stock == null)).reverse().slice(0, 15);
+  const rows = [...hist].filter(h => h.stock === activeStock || (h.stock == null && activeStock === 1)).reverse().slice(0, 15);
   document.getElementById('tb-painel').innerHTML = rows.length
     ? rows.map(h => `<tr>
         <td class="td-muted">${esc(h.data)}</td>
