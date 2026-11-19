@@ -1410,9 +1410,10 @@ function normSku(raw) {
   return s.toUpperCase();
 }
 
-function getVolsByAddr(addr) { return vols.filter(v => v.end === addr); }
-function getVolsBySku(sku)   { return vols.filter(v => v.sku === sku); }
-function getSkuDesc(sku)     { const v = vols.find(x => x.sku === sku); return v ? v.desc : ''; }
+function stockMatch(v) { return v.stock === activeStock || (v.stock == null && activeStock === 1); }
+function getVolsByAddr(addr) { return vols.filter(v => v.end === addr && stockMatch(v)); }
+function getVolsBySku(sku)   { return vols.filter(v => v.sku === sku && stockMatch(v)); }
+function getSkuDesc(sku)     { const v = vols.find(x => x.sku === sku && stockMatch(x)); return v ? v.desc : ''; }
 function getDescFromCatalog(sku) { return catalog[sku] || ''; }
 function getQtdCx(sku)          { return qtdCx[sku] || 0; }
 function isValidAddr(addr) {
@@ -1802,7 +1803,7 @@ function bxConfirmAddr(raw) {
     beep('error');
     return;
   }
-  const v = vols.find(x => x.sku === bxState.sku && x.end === addr);
+  const v = vols.find(x => x.sku === bxState.sku && x.end === addr && stockMatch(x));
   if (!v) {
     showBand('band-baddr', 'err', `Produto não encontrado em "${addr}".`);
     beep('error'); return;
